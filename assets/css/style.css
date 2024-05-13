@@ -10,15 +10,16 @@
   /* colours */
   --black: #000000;
   --extreme-dark-green: #012509;
-  --vivid-green: #67ff73;
-  --light-vivid-green: #85ff8f;
-  --vivid-teal: #67ffc7;
+  --vivid-green: #67ff73; /* logo - F */
+  --light-vivid-green: #85ff8f; /* background home page */
+  --vivid-teal: #67ffc7; /* logo - Lit */
   --dark-green: #013c0e;
   --white: #ffffff;
   --pink: #fe78fe;
   --yello-green: #baf55e;
   --turquoise: #44ffec;
   --orange: #ffc04d;
+  --mid-green: #6fcf07;
 
 }
 
@@ -258,4 +259,69 @@ h3 {
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+}
+
+/* Article page */
+
+.articles-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.individual-article {
+  width: 100%;
+  margin-bottom: 2rem;
+  color: var(--black);
+}
+
+.odd-article {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+}
+
+.even-article {
+  display: grid;
+  grid-template-columns: 1fr 8rem;
+}
+
+.article-image-container{
+  background-color: var(--white);
+}
+
+.first-article{
+  background-color: var(--yello-green);
+}
+
+.first-article > h3{
+  background-color: var(--mid-green);
+  padding: 0.5rem;
+}
+
+.first-article > p{
+  padding: 0.5rem;
+}
+
+.first-article > .article-date{
+  background-color: #b7d914;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.second-article{
+  background-color: var(--orange);
+}
+
+.second-article > h3{
+  background-color: #ff9e41;
+  padding: 0.5rem;
+}
+
+.second-article > p{
+  padding: 0.5rem;
+}
+
+.second-article > .article-date{
+  background-color: #e6c138;
+  padding: 0.5rem;
+  text-align: left;
 }
