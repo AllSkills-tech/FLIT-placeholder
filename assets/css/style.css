@@ -2,34 +2,161 @@
 
 
 /* CSS variables*/
+
 :root {
   /* fonts */
-  --title: ;
-  --main-font: ;
 
-  /* Colours */
-  --main-text: #000000;
-  --title-text: ;
-  --link-text: ;
-  --hover-text: ;
-  --main-background: #ffffff;
-  --header-background: ;
-  --primary: #bf9cf6;
-  --secondary: #bbc1da;
-  --accent: #052a75;
+
+  /* colours */
+  --black: #000000;
+  --extreme-dark-green: #012509;
+  --vivid-green: #67ff73;
+  --light-vivid-green: #85ff8f;
+  --vivid-teal: #67ffc7;
+  --dark-green: #013c0e;
+  --white: #ffffff;
+
 }
 
-/* Global */
+/* Global styles */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-header {
-  background-color: #bbc1da;
+a {
+  color: var(--white);
+  text-decoration: none;
 }
 
+a:hover {
+  color: var(--vivid-green);
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: var(--extreme-dark-green);
+  color: var(--white);
+  border-bottom: 1px solid var(--vivid-green);
+}
+
+.logo {
+  line-height: 2rem;
+}
+
+.logo-f {
+ color: var(--vivid-green);
+}
+
+.logo-lit {
+  color: var(--vivid-teal);
+}
+
+.desktop-nav > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.header-link {
+  margin-right: 1rem;
+  line-height: 2rem;
+}
+
+.burger {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Main */
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Footer */
+
 footer {
-  background-color: #bbc1da;
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--dark-green);
+  color: var(--white);
+  border-top: 1px solid var(--vivid-green);
+}
+
+footer > p {
+  margin-right: 2rem;
+}
+
+footer > ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.footer-link {
+  margin-right: 1rem;
+}
+
+/* Landing page */
+
+.title-plus-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title-plus-container > h2 {
+  margin-bottom: 1rem;
+}
+
+.solution-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--light-vivid-green);
+  color: var(--black);
+}
+
+.solution-image {
+  margin-right: 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+.solution-element {
+  margin-bottom: 1rem;
+}
+
+.solution-icon {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.solution-area {
+  font-weight: bold;
+}
+
+.solution-aim {
+  font-size: 1.5rem;
 }
