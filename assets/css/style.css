@@ -70,6 +70,10 @@ header {
   line-height: 2rem;
 }
 
+.active-page {
+  color: var(--vivid-teal);
+}
+
 .burger {
   display: none;
 }
