@@ -1,0 +1,35 @@
+/* Import Fonts */
+
+
+/* CSS variables*/
+:root {
+  /* fonts */
+  --title: ;
+  --main-font: ;
+
+  /* Colours */
+  --main-text: #000000;
+  --title-text: ;
+  --link-text: ;
+  --hover-text: ;
+  --main-background: #ffffff;
+  --header-background: ;
+  --primary: #bf9cf6;
+  --secondary: #bbc1da;
+  --accent: #052a75;
+}
+
+/* Global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #bbc1da;
+}
+
+footer {
+  background-color: #bbc1da;
+}
