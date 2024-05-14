@@ -340,3 +340,44 @@ h3 {
     padding: 0.5rem 0.5rem 0.5rem 8rem;
   }
 }
+
+/* Contact Form */
+
+.form-container {
+  width: 90vw;
+  max-width: 23rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background-color: #C4FF99;
+  color: black;
+}
+
+.form-section {
+  padding: 1rem;
+}
+
+.input-and-label {
+  margin-bottom: 1rem;
+}
+
+.radio-category {
+  margin-top: 0.5rem;
+}
+
+textarea {
+  margin-top: 0.5rem;
+}
+
+.name-section {
+ background-color: #8AFC34;
+}
+.ideas-section {
+  background-color: #A6FF67;
+}
+.email-section {
+  background-color: #C4FF99;
+}
+.submit-section {
+  background-color: #79F800;
+  text-align: right;
+ }

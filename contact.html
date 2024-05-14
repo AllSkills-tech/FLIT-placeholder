@@ -48,10 +48,95 @@
   <main>
     <div class="title-plus-container">
       <h2>
-        Contact us
+        What do you think would help women in Ireland?
       </h2>
-      <p></p>
+      <p>Please share your thoughts here</p>
     </div>
+    <div class="form-container">
+      <form>
+
+        <div class="name-section form-section">
+          <div class="input-and-label">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required>
+          </div>
+          <div class="input-and-label">
+            <p>Check the category that best applies to you:</p>
+            <div class="radio-category">
+              <input type="radio" name="repondant-category" id="provider" value="provider" required />
+              <label for="provider">Involved in <strong>providing</strong> financial literacy</label>
+            </div>
+            <div class="radio-category">
+              <input type="radio" name="repondant-category" id="user" value="user" required />
+              <label for="user">Looking to <strong>gain</strong> financial literacy</label>
+            </div>
+            <div class="radio-category">
+              <input type="radio" name="repondant-category" id="other" value="other" required />
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="ideas-section form-section">
+          <div class="input-and-label">
+            <label for="problems">What financial challenges do Irish women currently face?</label>
+            <textarea
+              id="problems"
+              cols="38"
+              rows="5"
+              placeholder="Type to fill ...."
+              name="problems"
+            ></textarea>
+          </div>
+          <div class="input-and-label">
+            <label for="features">What would like to see FLIT provide?</label>
+            <textarea
+              id="features"
+              cols="38"
+              rows="5"
+              placeholder="Type to fill ...."
+              name="features"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="email-section form-section">
+          <div class="input-and-label">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required>
+          </div>
+          <div class="input-and-label">
+            <label for="contact-consent">Happy for us to contact you directly?</label>
+            <input
+              type="checkbox"
+              id="contact-consent"
+              name="contact-consent"
+            >
+          </div>
+          <div class="input-and-label">
+            <label for="mail-list-consent">Would like to recieve updates about FLIT?</label>
+            <input
+              type="checkbox"
+              id="mail-list-consent"
+              name="mail-list-consent"
+            >
+          </div>
+        </div>
+
+        <div class="submit-section form-section">
+          <input type="submit">
+        </div>
+      </form>
+    </div>
+
   </main>
   <footer>
     <p>Copyright info</p>
