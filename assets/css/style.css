@@ -523,8 +523,9 @@ textarea {
   background-color: #FFED85;
 }
 .submit-section {
+  display: flex;
+  justify-content: space-between;
   background-color: #FFD754;
-  text-align: right;
   border-radius: 0px 0px 10px 10px;
  }
 
@@ -532,4 +533,8 @@ textarea {
   background-color: #FFA30F;
   border-radius: 10px;
   padding: 0.5rem;
+}
+
+.response-container {
+  padding-right: 1rem;
 }

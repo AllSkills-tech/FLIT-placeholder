@@ -52,7 +52,7 @@
       </h2>
     </div>
     <div class="form-container">
-      <form>
+      <form id="contact-form">
         <div class="form-title">
           <h3>Please share your thoughts here</h3>
         </div>
@@ -133,7 +133,10 @@
         </div>
 
         <div class="submit-section form-section">
-          <input type="submit" class="submit-button">
+          <div class="response-container">
+            <p id="submission-response"></p>
+          </div>
+          <input type="submit" value="Submit" class="submit-button" id="contact-submit-button">
         </div>
       </form>
     </div>
@@ -164,5 +167,58 @@
       </li>
     </ul>
   </footer>
+
+  <!-- Load the EmailJS SDK: -->
+    <script
+      type="text/javascript" 
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+ 
+    <!-- initialise the emailjs SDK -->
+    <script type="text/javascript">
+      (function() {
+        console.log("Initialising emailjs SDK")
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          //  publicKey: process.env.EMAILJS_PUBLIC_KEY,
+          publicKey: 'nJIzMgsyYaZu0gOHX',
+        });
+        console.log('publicKey initialised');
+      })();
+    </script>
+    <script type="text/javascript">
+      // CONTACT FORM - content below from emailjs:
+      window.onload = function() {
+        console.log("Window loaded - function running")
+        const btn = document.getElementById('contact-submit-button');
+        console.log(btn);
+        const response = document.getElementById('submission-response');
+        console.log(response);
+        document.getElementById('contact-form').addEventListener(
+          'submit', 
+          function(event) {
+            console.log("Submit function triggered")
+            event.preventDefault();
+            if (btn.value === 'Submit'){
+              response.innerHTML = 'Submitting form ...';
+              //emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+              emailjs.sendForm('service_l3pogah', 'template_sz9ug5t', this)
+              .then(() => {
+                response.innerHTML = 'Thank you for sharing your thoughts with us, you should receive an acknowledgement email in the next few minutes...';
+                btn.value = 'Clear form';
+              }, (err) => {
+                response.innerHTML = 'An error has occurred, please try submitting the form again.'
+                console.log(JSON.stringify(err));
+              });
+            } else if (btn.value === 'Clear form'){
+              console.log("Clear form called");
+              document.getElementById('contact-form').reset();
+              btn.value = 'Submit';
+              response.innerHTML = '';
+            }
+          }
+        );
+      }
+    </script>
 </body>
 </html>
