@@ -43,6 +43,7 @@ a:hover {
 
 header {
   position: fixed;
+  z-index: 4;
   top: 0;
   width: 100%;
   display: flex;
@@ -274,26 +275,55 @@ h3 {
 }
 
 .individual-blog {
+  position: relative;
   width: 20rem;
   height: 20rem;
   margin: 1rem;
   color: var(--black);
   overflow: scroll;
+  border-radius: 10px;
 }
 
 .blog-date {
+  position: absolute;
+  z-index: 2;
   padding: 0.5rem;
+  border-top-right-radius: 10% 40%;
+  border-bottom-right-radius: 100% 100%;
+  border-bottom-left-radius: 50% 10%;
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .blog-title {
-  padding: 0.5rem 0.5rem 0.5rem 3rem;
+  padding: 2rem 0.5rem 0.5rem 3.4rem;
+  height: 4rem;
+  position: relative;
 }
 
 .blog-title > h3 {
   margin: 0;
 }
 
+.title-wave {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.title-wave svg {
+  position: relative;
+  display: block;
+  width: calc(146% + 1.3px);
+  height: 15px;
+  transform: rotateY(180deg);
+}
+
 .blog-content {
+  margin-top: 1rem;
   padding: 1rem;
 }
 
@@ -310,6 +340,9 @@ h3 {
 .blog-1 > .blog-title {
   background-color: #67F2FF;
 }
+.blog-1-wave .shape-fill {
+  fill: #67F2FF;
+}
 
 .blog-2 {
   background-color: #CFCBFF;
@@ -319,6 +352,9 @@ h3 {
 }
 .blog-2 > .blog-title {
   background-color: #AEA9FF;
+}
+.blog-2-wave .shape-fill {
+  fill: #AEA9FF;
 }
 
 .blog-3 {
@@ -330,6 +366,9 @@ h3 {
 .blog-3 > .blog-title {
   background-color: #FFE285;
 }
+.blog-3-wave .shape-fill {
+  fill: #FFE285;
+}
 
 @media screen and (min-width:576px) {
   .individual-blog {
@@ -338,6 +377,11 @@ h3 {
   }
   .blog-title {
     padding: 0.5rem 0.5rem 0.5rem 8rem;
+  }
+  .blog-date {
+    border-top-right-radius: 10% 40%;
+    width: 6rem;
+    height: 3rem;
   }
 }
 
