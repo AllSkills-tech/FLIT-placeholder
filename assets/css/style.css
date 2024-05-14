@@ -261,67 +261,82 @@ h3 {
   }
 }
 
-/* Article page */
+/* Blog page */
 
-.articles-container {
+.blog-container {
   width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.individual-blog {
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  color: var(--black);
+  overflow: scroll;
+}
+
+.blog-date {
+  padding: 0.5rem;
+}
+
+.blog-title {
+  padding: 0.5rem 0.5rem 0.5rem 3rem;
+}
+
+.blog-title > h3 {
+  margin: 0;
+}
+
+.blog-content {
   padding: 1rem;
 }
 
-.individual-article {
-  width: 100%;
-  margin-bottom: 2rem;
-  color: var(--black);
+.blog-content > p {
+  margin-bottom: 0.5rem;
 }
 
-.odd-article {
-  display: grid;
-  grid-template-columns: 8rem 1fr;
+.blog-1 {
+  background-color: #ABF7FE;
+}
+.blog-1 > .blog-date {
+  background-color: #00EBFE;
+}
+.blog-1 > .blog-title {
+  background-color: #67F2FF;
 }
 
-.even-article {
-  display: grid;
-  grid-template-columns: 1fr 8rem;
+.blog-2 {
+  background-color: #CFCBFF;
+}
+.blog-2 > .blog-date {
+  background-color: #8C86FF;
+}
+.blog-2 > .blog-title {
+  background-color: #AEA9FF;
 }
 
-.article-image-container{
-  background-color: var(--white);
+.blog-3 {
+  background-color: #FFED85;
+}
+.blog-3 > .blog-date {
+  background-color: #FFD754;
+}
+.blog-3 > .blog-title {
+  background-color: #FFE285;
 }
 
-.first-article{
-  background-color: var(--yello-green);
-}
-
-.first-article > h3{
-  background-color: var(--mid-green);
-  padding: 0.5rem;
-}
-
-.first-article > p{
-  padding: 0.5rem;
-}
-
-.first-article > .article-date{
-  background-color: #b7d914;
-  padding: 0.5rem;
-  text-align: right;
-}
-
-.second-article{
-  background-color: var(--orange);
-}
-
-.second-article > h3{
-  background-color: #ff9e41;
-  padding: 0.5rem;
-}
-
-.second-article > p{
-  padding: 0.5rem;
-}
-
-.second-article > .article-date{
-  background-color: #e6c138;
-  padding: 0.5rem;
-  text-align: left;
+@media screen and (min-width:576px) {
+  .individual-blog {
+    width: 30rem;
+    height: 18rem;
+  }
+  .blog-title {
+    padding: 0.5rem 0.5rem 0.5rem 8rem;
+  }
 }
