@@ -208,8 +208,8 @@ h3 {
 
 .about-section {
   width: 100%;
-  margin-bottom: 1rem;
   color: var(--black);
+  position: relative;
 }
 
 .about-section-info {
@@ -217,32 +217,97 @@ h3 {
 }
 
 .about-image {
-  margin: 1rem;
+  margin: 2rem 1rem 2rem 1rem;
+  height: 6rem;
   border: 1px solid black;
+}
+
+.about-tilt-left {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-tilt-left svg {
+  position: relative;
+  display: block;
+  width: calc(108% + 1.3px);
+  height: 39px;
+  transform: rotateY(180deg);
+}
+
+.about-tilt-right {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about-tilt-right svg {
+  position: relative;
+  display: block;
+  width: calc(108% + 1.3px);
+  height: 39px;
+}
+
+.second-about, .third-about, .fourth-about {
+  padding-top: 1.2rem;
 }
 
 .first-about {
   display: grid;
-  grid-template-columns: 6rem 1fr;
+  height: 11rem;
+  grid-template-columns: 1fr 5rem;
   background-color: var(--yello-green);
+  border-radius: 10px 10px 0px 0px;
+}
+.first-tilt {
+  position: absolute;
+  z-index: 2;
+  top: 11rem;
+  left: 0;
+}
+.first-tilt .shape-fill {
+  fill: var(--yello-green);
 }
 
 .second-about {
   display: grid;
-  grid-template-columns: 1fr 6rem;
+  height: 10rem;
+  grid-template-columns: 5rem 1fr;
   background-color: var(--pink);
+}
+.second-tilt {
+  position: absolute;
+  z-index: 2;
+  top: 10rem;
+  left: 0;
+}
+.second-tilt .shape-fill {
+  fill: var(--pink);
 }
 
 .third-about {
   display: grid;
-  grid-template-columns: 6rem 1fr;
+  height: 18rem;
+  grid-template-columns: 1fr 5rem ;
   background-color: var(--turquoise);
+}
+.third-tilt {
+  position: absolute;
+  z-index: 2;
+  top: 18rem;
+  left: 0;
+}
+.third-tilt .shape-fill {
+  fill: var(--turquoise);
 }
 
 .fourth-about {
   display: grid;
-  grid-template-columns: 1fr 6rem;
+  height: 15rem;
+  grid-template-columns: 5rem 1fr;
   background-color: var(--orange);
+  border-radius: 0px 0px 10px 10px ;
 }
 
 .about-list {
@@ -252,13 +317,40 @@ h3 {
 
 .about-sections-container {
   width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
-@media screen and (min-width:992px) {
-  .about-sections-container {
-    max-width: 50rem;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+
+@media screen and (min-width:576px) {  
+  .second-about, .third-about, .fourth-about {
+    padding-top: 1.5rem;
+  }
+  
+  .first-about {
+    height: 9rem;
+    grid-template-columns: 1fr 6rem;
+  }
+  .first-tilt {
+    top: 9rem;
+  }
+  
+  .second-about {
+    grid-template-columns: 6rem 1fr;
+  }
+  
+  .third-about {
+    height: 12rem;
+    grid-template-columns: 1fr 6rem ;
+  }
+  .third-tilt {
+    top: 12rem;
+  }
+  
+  .fourth-about {
+    height: 13rem;
+    grid-template-columns: 6rem 1fr;
   }
 }
 
