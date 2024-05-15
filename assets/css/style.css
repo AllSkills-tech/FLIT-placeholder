@@ -8,20 +8,34 @@
   --medium-font-weight: 400;
   --heavy-font-weight: 500;
   
-  /* colours */
+  /* main colours */
   --black: #000000;
-  --extreme-dark-green: #012509;
-  --vivid-green: #67ff73; /* logo - F */
-  --light-vivid-green: #85ff8f; /* background home page */
-  --vivid-teal: #67ffc7; /* logo - Lit */
-  --dark-green: #013c0e;
   --white: #ffffff;
-  --pink: #fe78fe;
-  --yello-green: #baf55e;
-  --turquoise: #44ffec;
-  --orange: #ffc04d;
-  --mid-green: #6fcf07;
+  --extreme-dark-green: #012509; /* Nav bar background */
+  --vivid-green: #67ff73; /* Border highlight */
+  --ireland-green: #6FDB42; /* flit */
+  --plastel-pink: #E2BDF4; /* Active page and main subtitle */
+  --bright-pink: #BB61E6; /* Link hover and for darker backgrounds */
+  --extra-bright-pink: #9800DA; /* For lighter backgrounds */
 
+  /* background pastels */
+  
+  --blue-1: #A7f2f8;
+  --blue-2: #5FE9F5;
+  --blue-3: #00DEF1;
+  --green-1: #DBF5C9;
+  --green-2: #C3EFA6;
+  --green-3: #A9E780;
+  --green-4: #93E161;
+  --purple-1: #CFCBFF;
+  --purple-2: #AEA9FF;
+  --purple-3: #8C86FF;
+  --pink-1: #FBC0F5;
+  --pink-2: #F994EF;
+  --pink-3: #F55FE9;
+  --yellow-orange-1: #FFED85;
+  --yellow-orange-2: #FFE285;
+  --yellow-orange-3: #FFD754;
 }
 
 /* Global styles */
@@ -45,7 +59,7 @@ a {
 }
 
 a:hover {
-  color: var(--vivid-green);
+  color: var(--bright-pink);
 }
 
 h1 {
@@ -91,11 +105,11 @@ header {
 }
 
 .logo-f {
- color: var(--vivid-green);
+  color: var(--ireland-green);
 }
 
 .logo-lit {
-  color: var(--vivid-teal);
+  color: var(--ireland-green);
 }
 
 .desktop-nav > ul {
@@ -109,7 +123,7 @@ header {
 }
 
 .active-page {
-  color: var(--vivid-teal);
+  color: var(--plastel-pink);
 }
 
 .burger {
@@ -139,7 +153,7 @@ footer {
   padding: 0.5rem;
   display: flex;
   justify-content: flex-start;
-  background-color: var(--dark-green);
+  background-color: var(--extreme-dark-green);
   color: var(--white);
   border-top: 1px solid var(--vivid-green);
 }
@@ -166,6 +180,15 @@ footer > ul {
 
 .title-plus-container > h2 {
   margin-bottom: 1rem;
+}
+
+.title-plus-container > p {
+  color: var(--plastel-pink);
+}
+
+.launch-info {
+  color: var(--bright-pink);
+  font-size: 2rem;
 }
 
 @media screen and (min-width:576px) {
@@ -236,7 +259,7 @@ footer > ul {
   display: grid;
   height: 11rem;
   grid-template-columns: 1fr 5rem;
-  background-color: var(--yello-green);
+  background-color: var(--green-3);
   border-radius: 10px 10px 0px 0px;
 }
 .first-tilt {
@@ -246,14 +269,14 @@ footer > ul {
   left: 0;
 }
 .first-tilt .shape-fill {
-  fill: var(--yello-green);
+  fill: var(--green-3);
 }
 
 .second-about {
   display: grid;
   height: 10rem;
   grid-template-columns: 5rem 1fr;
-  background-color: var(--pink);
+  background-color: var(--pink-2);
 }
 .second-tilt {
   position: absolute;
@@ -262,14 +285,14 @@ footer > ul {
   left: 0;
 }
 .second-tilt .shape-fill {
-  fill: var(--pink);
+  fill: var(--pink-2);
 }
 
 .third-about {
   display: grid;
   height: 18rem;
   grid-template-columns: 1fr 5rem ;
-  background-color: var(--turquoise);
+  background-color: var(--blue-1);
 }
 .third-tilt {
   position: absolute;
@@ -278,14 +301,14 @@ footer > ul {
   left: 0;
 }
 .third-tilt .shape-fill {
-  fill: var(--turquoise);
+  fill: var(--blue-1);
 }
 
 .fourth-about {
   display: grid;
   height: 15rem;
   grid-template-columns: 5rem 1fr;
-  background-color: var(--orange);
+  background-color: var(--yellow-orange-1);
   border-radius: 0px 0px 10px 10px ;
 }
 
@@ -405,42 +428,42 @@ footer > ul {
 }
 
 .blog-1 {
-  background-color: #ABF7FE;
+  background-color: var(--blue-1);
 }
 .blog-1 > .blog-date {
-  background-color: #00EBFE;
+  background-color: var(--blue-3);
 }
 .blog-1 > .blog-title {
-  background-color: #67F2FF;
+  background-color: var(--blue-2);
 }
 .blog-1-wave .shape-fill {
-  fill: #67F2FF;
+  fill: var(--blue-2);
 }
 
 .blog-2 {
-  background-color: #CFCBFF;
+  background-color: var(--purple-1);
 }
 .blog-2 > .blog-date {
-  background-color: #8C86FF;
+  background-color: var(--purple-3);
 }
 .blog-2 > .blog-title {
-  background-color: #AEA9FF;
+  background-color: var(--purple-2);
 }
 .blog-2-wave .shape-fill {
-  fill: #AEA9FF;
+  fill: var(--purple-2);
 }
 
 .blog-3 {
-  background-color: #FFED85;
+  background-color: var(--yellow-orange-1);
 }
 .blog-3 > .blog-date {
-  background-color: #FFD754;
+  background-color: var(--yellow-orange-3);
 }
 .blog-3 > .blog-title {
-  background-color: #FFE285;
+  background-color: var(--yellow-orange-2);
 }
 .blog-3-wave .shape-fill {
-  fill: #FFE285;
+  fill: var(--yellow-orange-2);
 }
 
 @media screen and (min-width:576px) {
@@ -483,16 +506,6 @@ footer > ul {
   color: black;
 }
 
-.form-title {
-  background-color: #FFA30F;
-  border-radius: 10px 10px 0px 0px;
-  padding: 1rem;
-}
-
-.form-title > h3 {
-  margin-bottom: 0;
-}
-
 .form-section {
   padding: 1rem;
 }
@@ -510,23 +523,25 @@ textarea {
 }
 
 .name-section {
- background-color: #FFD754;
+border-radius: 10px 10px 0px 0px;
+ background-color: var(--green-3);
 }
 .ideas-section {
-  background-color: #FFE285;
+  background-color: var(--green-2);
 }
 .email-section {
-  background-color: #FFED85;
+  background-color: var(--green-1);
 }
 .submit-section {
   display: flex;
   justify-content: space-between;
-  background-color: #FFD754;
+  background-color: var(--green-1);
   border-radius: 0px 0px 10px 10px;
  }
 
  .submit-button {
-  background-color: #FFA30F;
+  background-color: var(--extra-bright-pink);
+  color: var(--white);
   border-radius: 10px;
   padding: 0.5rem;
 }
