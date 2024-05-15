@@ -1,12 +1,13 @@
-/* Import Fonts */
-
-
 /* CSS variables*/
 
 :root {
   /* fonts */
-
-
+  --main-font: "Poppins", sans-serif;
+  --title-font: "Fira Sans", sans-serif;
+  --main-font-weight: 300;
+  --medium-font-weight: 400;
+  --heavy-font-weight: 500;
+  
   /* colours */
   --black: #000000;
   --extreme-dark-green: #012509;
@@ -28,6 +29,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--main-font);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: var(--main-font-weight);
 }
 
 a {
@@ -37,6 +46,29 @@ a {
 
 a:hover {
   color: var(--vivid-green);
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-weight: var(--light-font-weight);
+}
+
+h2 {
+  font-family: var(--title-font);
+  font-weight: var(--medium-font-weight);
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: var(--heavy-font-weight);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width:576px) {
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* Header */
@@ -90,12 +122,6 @@ header {
 
 /* Main */
 
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 main {
   flex-grow: 1;
   display: flex;
@@ -140,18 +166,9 @@ footer > ul {
 
 .title-plus-container > h2 {
   margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 @media screen and (min-width:576px) {
-  .title-plus-container > h2 {
-    font-size: 2.5rem;
-  }
   .title-plus-container > p {
     font-size: 1.5rem;
   }
