@@ -15,7 +15,7 @@
   --vivid-green: #67ff73; /* Border highlight */
   --ireland-green: #6FDB42; /* flit */
   --plastel-pink: #E2BDF4; /* Active page and main subtitle */
-  --bright-pink: #BB61E6; /* Link hover and for darker backgrounds */
+  --bright-pink: #BB61E6; /* Logo, Link hover and for darker backgrounds */
   --extra-bright-pink: #9800DA; /* For lighter backgrounds */
 
   /* background pastels */
@@ -95,9 +95,9 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  background-color: var(--extreme-dark-green);
+  background-color: black;
   color: var(--white);
-  border-bottom: 1px solid var(--vivid-green);
+  border-bottom: 1px solid var(--purple-1);
 }
 
 .logo {
@@ -105,11 +105,11 @@ header {
 }
 
 .logo-f {
-  color: var(--ireland-green);
+  color: var(--bright-pink);
 }
 
 .logo-lit {
-  color: var(--ireland-green);
+  color: var(--bright-pink);
 }
 
 .desktop-nav > ul {
@@ -123,7 +123,7 @@ header {
 }
 
 .active-page {
-  color: var(--plastel-pink);
+  color: var(--purple-1);
 }
 
 .burger {
@@ -140,7 +140,6 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding-top: 4rem;
   background-color: var(--black);
   color: var(--white);
@@ -153,9 +152,9 @@ footer {
   padding: 0.5rem;
   display: flex;
   justify-content: flex-start;
-  background-color: var(--extreme-dark-green);
+  background-color: black;
   color: var(--white);
-  border-top: 1px solid var(--vivid-green);
+  border-top: 1px solid var(--purple-1);
 }
 
 footer > p {
@@ -183,11 +182,11 @@ footer > ul {
 }
 
 .title-plus-container > p {
-  color: var(--plastel-pink);
+  color: var(--purple-1);
 }
 
 .launch-info {
-  color: var(--bright-pink);
+  color: var(--green-4);
   font-size: 2rem;
 }
 
@@ -208,115 +207,43 @@ footer > ul {
 
 /* About page */
 
+.about-container {
+  width: 90vw;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .about-section {
   width: 100%;
+  min-height: 6rem;
   color: var(--black);
   position: relative;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
-.about-section-info {
-  padding: 1rem;
+.about-title {
+  text-align: center;
+  padding: 0.5rem;
+  width: 18rem;
+  margin-bottom: 2rem;
+  z-index: 2;
+  border-radius: 10px;
 }
 
-.about-section-info > h3 {
+.about-title > h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
 }
 
-.about-image {
-  margin: 2rem 1rem 2rem 1rem;
-  height: 6rem;
-  border: 1px solid black;
-}
-
-.about-tilt-left {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.about-tilt-left svg {
+.about-info {
+  z-index: 0;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 10px;
+  max-width: 40rem;
+  display: none;
   position: relative;
-  display: block;
-  width: calc(108% + 1.3px);
-  height: 39px;
-  transform: rotateY(180deg);
-}
-
-.about-tilt-right {
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.about-tilt-right svg {
-  position: relative;
-  display: block;
-  width: calc(108% + 1.3px);
-  height: 39px;
-}
-
-.second-about, .third-about, .fourth-about {
-  padding-top: 1.2rem;
-  font-size: 0.9rem;
-}
-
-.first-about {
-  font-size: 0.9rem;
-  display: grid;
-  height: 16rem;
-  grid-template-columns: 1fr 5rem;
-  background-color: var(--purple-2);
-  border-radius: 10px 10px 0px 0px;
-}
-.first-tilt {
-  position: absolute;
-  z-index: 2;
-  top: 16rem;
-  left: 0;
-}
-.first-tilt .shape-fill {
-  fill: var(--purple-2);
-}
-
-.second-about {
-  display: grid;
-  height: 12rem;
-  grid-template-columns: 5rem 1fr;
-  background-color: var(--green-2);
-}
-.second-tilt {
-  position: absolute;
-  z-index: 2;
-  top: 12rem;
-  left: 0;
-}
-.second-tilt .shape-fill {
-  fill: var(--green-2);
-}
-
-.third-about {
-  display: grid;
-  height: 24rem;
-  grid-template-columns: 1fr 5rem ;
-  background-color: var(--pink-2);
-}
-.third-tilt {
-  position: absolute;
-  z-index: 2;
-  top: 24rem;
-  left: 0;
-}
-.third-tilt .shape-fill {
-  fill: var(--pink-2);
-}
-
-.fourth-about {
-  display: grid;
-  height: 18rem;
-  grid-template-columns: 5rem 1fr;
-  background-color: var(--blue-1);
-  border-radius: 0px 0px 10px 10px ;
+  top: 1rem;
 }
 
 .about-list {
@@ -324,66 +251,53 @@ footer > ul {
   margin-inline-start: 1rem;
 }
 
-.about-sections-container {
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+#first-about {
+  background-color: var(--green-1);
+}
+.first-title {
+  position: absolute;
+  left: 2rem;
+  background-color: var(--green-2);
 }
 
-@media screen and (min-width:450px) {
-  .first-about {
-    height: 12rem;
-  }
-  .first-tilt {
-    top: 12rem;
-  }
-  
-  .second-about {
-    height: 10rem;
-  }
-  .second-tilt {
-    top: 10rem;
-  }
-  .third-about {
-    height: 18rem;
-  }
-  .third-tilt {
-    top: 18rem;
-  }
-  .fourth-about {
-    height: 13rem;
-  }
+#second-about {
+  background-color: var(--yellow-orange-1);
 }
+.second-title {
+  position: absolute;
+  right: 2rem;
+  background-color: var(--yellow-orange-2);
+}
+
+#third-about {
+  background-color: var(--pink-1);
+}
+.third-title {
+  position: absolute;
+  left: 2rem;
+  background-color: var(--pink-2);
+}
+
+#fourth-about {
+  background-color: var(--blue-1);
+}
+.fourth-title {
+  position: absolute;
+  right: 2rem;
+  background-color: var(--blue-2);
+}
+
 
 @media screen and (min-width:576px) {  
-  .second-about, .third-about, .fourth-about {
-    padding-top: 1.5rem;
+  .about-info {
+    display: block;
   }
-  
-  .first-about {
-    height: 9rem;
-    grid-template-columns: 1fr 6rem;
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
   }
-  .first-tilt {
-    top: 9rem;
-  }
-  
-  .second-about {
-    grid-template-columns: 6rem 1fr;
-  }
-  
-  .third-about {
-    height: 14rem;
-    grid-template-columns: 1fr 6rem ;
-  }
-  .third-tilt {
-    top: 14rem;
-  }
-  
-  .fourth-about {
-    height: 13rem;
-    grid-template-columns: 6rem 1fr;
+  .click-info {
+    display: none;
   }
 }
 
@@ -472,16 +386,16 @@ footer > ul {
 }
 
 .blog-2 {
-  background-color: var(--purple-1);
+  background-color: var(--green-1);
 }
 .blog-2 > .blog-date {
-  background-color: var(--purple-3);
+  background-color: var(--green-3);
 }
 .blog-2 > .blog-title {
-  background-color: var(--purple-2);
+  background-color: var(--green-2);
 }
 .blog-2-wave .shape-fill {
-  fill: var(--purple-2);
+  fill: var(--green-2);
 }
 
 .blog-3 {
