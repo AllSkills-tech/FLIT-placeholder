@@ -241,7 +241,7 @@ footer > ul {
   padding: 3rem 1rem 1rem 1rem;
   border-radius: 10px;
   max-width: 40rem;
-  display: none;
+  display: block;
   position: relative;
   top: 1rem;
 }
@@ -297,7 +297,7 @@ footer > ul {
     flex-wrap: wrap;
   }
   .click-info {
-    display: none;
+    display: block;
   }
 }
 
