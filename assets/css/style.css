@@ -218,6 +218,11 @@ footer > ul {
   padding: 1rem;
 }
 
+.about-section-info > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
 .about-image {
   margin: 2rem 1rem 2rem 1rem;
   height: 6rem;
@@ -253,62 +258,64 @@ footer > ul {
 
 .second-about, .third-about, .fourth-about {
   padding-top: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .first-about {
+  font-size: 0.9rem;
   display: grid;
-  height: 11rem;
+  height: 16rem;
   grid-template-columns: 1fr 5rem;
-  background-color: var(--green-3);
+  background-color: var(--purple-2);
   border-radius: 10px 10px 0px 0px;
 }
 .first-tilt {
   position: absolute;
   z-index: 2;
-  top: 11rem;
+  top: 16rem;
   left: 0;
 }
 .first-tilt .shape-fill {
-  fill: var(--green-3);
+  fill: var(--purple-2);
 }
 
 .second-about {
   display: grid;
-  height: 10rem;
+  height: 12rem;
   grid-template-columns: 5rem 1fr;
-  background-color: var(--pink-2);
+  background-color: var(--green-2);
 }
 .second-tilt {
   position: absolute;
   z-index: 2;
-  top: 10rem;
+  top: 12rem;
   left: 0;
 }
 .second-tilt .shape-fill {
-  fill: var(--pink-2);
+  fill: var(--green-2);
 }
 
 .third-about {
   display: grid;
-  height: 18rem;
+  height: 24rem;
   grid-template-columns: 1fr 5rem ;
-  background-color: var(--blue-1);
+  background-color: var(--pink-2);
 }
 .third-tilt {
   position: absolute;
   z-index: 2;
-  top: 18rem;
+  top: 24rem;
   left: 0;
 }
 .third-tilt .shape-fill {
-  fill: var(--blue-1);
+  fill: var(--pink-2);
 }
 
 .fourth-about {
   display: grid;
-  height: 15rem;
+  height: 18rem;
   grid-template-columns: 5rem 1fr;
-  background-color: var(--yellow-orange-1);
+  background-color: var(--blue-1);
   border-radius: 0px 0px 10px 10px ;
 }
 
@@ -324,6 +331,30 @@ footer > ul {
   margin-bottom: 2rem;
 }
 
+@media screen and (min-width:450px) {
+  .first-about {
+    height: 12rem;
+  }
+  .first-tilt {
+    top: 12rem;
+  }
+  
+  .second-about {
+    height: 10rem;
+  }
+  .second-tilt {
+    top: 10rem;
+  }
+  .third-about {
+    height: 18rem;
+  }
+  .third-tilt {
+    top: 18rem;
+  }
+  .fourth-about {
+    height: 13rem;
+  }
+}
 
 @media screen and (min-width:576px) {  
   .second-about, .third-about, .fourth-about {
@@ -343,11 +374,11 @@ footer > ul {
   }
   
   .third-about {
-    height: 12rem;
+    height: 14rem;
     grid-template-columns: 1fr 6rem ;
   }
   .third-tilt {
-    top: 12rem;
+    top: 14rem;
   }
   
   .fourth-about {
