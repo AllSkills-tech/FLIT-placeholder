@@ -1,9 +1,9 @@
 let infoShown = false;
 
 window.onload = function() {
-  if (window.innerWidth < 576) {
+  /*if (window.innerWidth < 576) {
     window.addEventListener('click', infoOpen)
-  }
+  }*/
 }
 
 function infoOpen(event) {
