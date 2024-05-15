@@ -11,10 +11,11 @@
   /* colours */
   --black: #000000;
   --extreme-dark-green: #012509;
-  --vivid-green: #67ff73; /* logo - F */
-  --light-vivid-green: #85ff8f; /* background home page */
-  --vivid-teal: #67ffc7; /* logo - Lit */
-  --dark-green: #013c0e;
+  --vivid-green: #67ff73; /* Border highlight */
+  --ireland-green: #6FDB42; /* flit */
+  --plastel-pink: #E2BDF4; /* Active page and main subtitle */
+  --bright-pink: #BB61E6; /* Link hover */
+
   --white: #ffffff;
   --pink: #fe78fe;
   --yello-green: #baf55e;
@@ -45,7 +46,7 @@ a {
 }
 
 a:hover {
-  color: var(--vivid-green);
+  color: var(--bright-pink);
 }
 
 h1 {
@@ -91,11 +92,11 @@ header {
 }
 
 .logo-f {
- color: var(--vivid-green);
+  color: var(--ireland-green);
 }
 
 .logo-lit {
-  color: var(--vivid-teal);
+  color: var(--ireland-green);
 }
 
 .desktop-nav > ul {
@@ -109,7 +110,7 @@ header {
 }
 
 .active-page {
-  color: var(--vivid-teal);
+  color: var(--plastel-pink);
 }
 
 .burger {
@@ -139,7 +140,7 @@ footer {
   padding: 0.5rem;
   display: flex;
   justify-content: flex-start;
-  background-color: var(--dark-green);
+  background-color: var(--extreme-dark-green);
   color: var(--white);
   border-top: 1px solid var(--vivid-green);
 }
@@ -166,6 +167,15 @@ footer > ul {
 
 .title-plus-container > h2 {
   margin-bottom: 1rem;
+}
+
+.title-plus-container > p {
+  color: var(--plastel-pink);
+}
+
+.launch-info {
+  color: var(--bright-pink);
+  font-size: 2rem;
 }
 
 @media screen and (min-width:576px) {
