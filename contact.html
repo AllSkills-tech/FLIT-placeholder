@@ -55,21 +55,30 @@
       <h2>
         Contact <span class="logo-f">F</span><span class="logo-lit">Lit</span>
       </h2>
-      <p>What do you think would help women in Ireland?</p>
+      <p>We are interested in your views as to what might be helpful to females in Ireland in navigating their finances</p>
+      <p>In particular we are interested in any observations on 'decision points' or 'crunch points' where it can be difficult to source good information to make decisions.</p> 
+      <p>What obstacles are encountered, what might be helpful?</p>
+
     </div>
     <div class="form-container">
       <form id="contact-form">
         <div class="name-section form-section">
           <div class="input-and-label">
-            <label for="name">Name:</label>
+            <label for="user_name">Name:</label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="user_name"
+              name="user_name"
               required>
           </div>
+<!-- DMcC 16/05/24 add email field as per EMailJS form -->
+          <div class="input-and-label">   
+            <input type="text" name="user_email" id="emailaddress" class="form-control" placeholder="Email"
+                                  required />
+      </div>                   
           <div class="input-and-label">
-            <p>Check the category that best applies to you:</p>
+   <!-- DMcC 16/05/24 Remove category fields for now, to align with EmailJS form fields -->
+   <!--         <p>Check the category that best applies to you:</p>
             <div class="radio-category">
               <input type="radio" name="repondant-category" id="provider" value="provider" required />
               <label for="provider">Involved in <strong>providing</strong> financial literacy</label>
@@ -82,19 +91,20 @@
               <input type="radio" name="repondant-category" id="other" value="other" required />
               <label for="other">Other</label>
             </div>
-          </div>
+          </div> -->
+            
         </div>
 
         <div class="ideas-section form-section">
           <div class="input-and-label">
-            <label for="problems">What financial challenges do Irish women currently face?</label>
+<!--            <label for="problems">What financial challenges do Irish women currently face?</label>
             <textarea
               id="problems"
               cols="38"
               rows="5"
               placeholder="Type to fill ...."
               name="problems"
-            ></textarea>
+            ></textarea> -->
           </div>
           <div class="input-and-label">
             <label for="features">What would like to see FLIT provide?</label>
