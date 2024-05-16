@@ -236,6 +236,10 @@ footer > ul {
   margin-bottom: 0;
 }
 
+.click-info {
+  display: none;
+}
+
 .about-info {
   z-index: 0;
   padding: 3rem 1rem 1rem 1rem;
@@ -297,7 +301,7 @@ footer > ul {
     flex-wrap: wrap;
   }
   .click-info {
-    display: block;
+    display: none;
   }
 }
 
