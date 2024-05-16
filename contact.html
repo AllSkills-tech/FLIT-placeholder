@@ -55,9 +55,10 @@
       <h2>
         Contact <span class="logo-f">F</span><span class="logo-lit">Lit</span>
       </h2>
-      <p>We are interested in your views as to what might be helpful to females in Ireland in navigating their finances</p>
-      <p>In particular we are interested in any observations on 'decision points' or 'crunch points' where it can be difficult to source good information to make decisions.</p> 
-      <p>What obstacles are encountered, what might be helpful?</p>
+      <p>We are interested in your views!</p>
+      <p>What might be helpful to females in Ireland in navigating finances</p>
+      <p>'Decision points' where good information is needed?</p> 
+      <p>Obstacles encountered, what might be helpful?</p>
 
     </div>
     <div class="form-container">
@@ -71,12 +72,6 @@
               name="user_name"
               required>
           </div>
-<!-- DMcC 16/05/24 add email field as per EMailJS form -->
-          <div class="input-and-label">   
-            <input type="text" name="user_email" id="emailaddress" class="form-control" placeholder="Email"
-                                  required />
-      </div>                   
-          <div class="input-and-label">
    <!-- DMcC 16/05/24 Remove category fields for now, to align with EmailJS form fields -->
    <!--         <p>Check the category that best applies to you:</p>
             <div class="radio-category">
@@ -107,27 +102,29 @@
             ></textarea> -->
           </div>
           <div class="input-and-label">
-            <label for="features">What would like to see FLIT provide?</label>
+            <label for="inquiry_summary">What would like to see FLIT provide?</label>
             <textarea
-              id="features"
+              id="inquiry_summary"
               cols="38"
               rows="5"
               placeholder="Type to fill ...."
-              name="features"
+              name="inquiry_summary"
             ></textarea>
           </div>
         </div>
 
         <div class="email-section form-section">
           <div class="input-and-label">
-            <label for="email">Email:</label>
+            <label for="user_email">Email:</label>
             <input
               type="email"
-              id="email"
-              name="email"
+              id="user_email"
+              name="user_email"
               required>
           </div>
-          <div class="input-and-label">
+          <!-- DMcC 16/05/24 commenting out below for now as not yet aligned with EmailJS fields-->
+          <!-- 
+            <div class="input-and-label">
             <label for="contact-consent">Happy for us to contact you directly?</label>
             <input
               type="checkbox"
@@ -143,6 +140,7 @@
               name="mail-list-consent"
             >
           </div>
+        -->
         </div>
 
         <div class="submit-section form-section">
