@@ -300,7 +300,8 @@ header {
   color: var(--black);
   position: relative;
   border-radius: 10px;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
 
 .about-title {
@@ -310,6 +311,7 @@ header {
   margin-bottom: 2rem;
   z-index: 2;
   border-radius: 10px;
+  background-color: var(--pastel-green-2);
 }
 
 .about-title > h3 {
@@ -323,12 +325,22 @@ header {
 
 .about-info {
   z-index: 0;
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 3.5rem 1rem 1rem 1rem;
   border-radius: 10px;
   max-width: 40rem;
   display: block;
   position: relative;
   top: 1rem;
+  background-color: var(--pastel-green-1);
+}
+
+.about-info > p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.about-emphasize {
+  font-weight: var(--heavy-font-weight);
 }
 
 .about-list {
@@ -336,46 +348,24 @@ header {
   margin-inline-start: 1rem;
 }
 
-#first-about {
-  background-color: #ECF9E8;
-}
-.first-title {
-  position: absolute;
-  left: 2rem;
-  background-color: #D0EFC7;
+.about-list > li {
+  margin-bottom: 0.5rem;
 }
 
-#second-about {
-  background-color: var(--yellow-orange-1);
-}
-.second-title {
+.left-title {
   position: absolute;
-  right: 2rem;
-  background-color: var(--yellow-orange-2);
+  left: 1rem;
 }
 
-#third-about {
-  background-color: var(--pink-1);
-}
-.third-title {
+.right-title {
   position: absolute;
-  left: 2rem;
-  background-color: var(--pink-2);
+  right: 1rem;
 }
-
-#fourth-about {
-  background-color: var(--blue-1);
-}
-.fourth-title {
-  position: absolute;
-  right: 2rem;
-  background-color: var(--blue-2);
-}
-
 
 @media screen and (min-width:576px) {  
   .about-info {
     display: block;
+    padding: 3.5rem 1.5rem 1.5rem 1.5rem;
   }
   .about-container {
     display: flex;
@@ -383,6 +373,13 @@ header {
   }
   .click-info {
     display: none;
+  }
+  .left-title {
+    left: 2rem;
+  }
+  
+  .right-title {
+    right: 2rem;
   }
 }
 
