@@ -26,7 +26,7 @@
     <nav class="desktop-nav">
       <ul>
         <li class="header-link">
-          <a href="index.html" class="active-page" aria-current="page">
+          <a href="index.html">
             Home
           </a>
         </li>
@@ -41,7 +41,7 @@
           </a>
         </li>
         <li class="header-link highlighted-link">
-          <a href="contact.html">
+          <a href="contact.html" class="active-page" aria-current="page">
             Contact us
           </a>
         </li>
@@ -51,10 +51,10 @@
       <div class="bar"></div>
     </button>
   </header>
-  <div class="mobile-nav">
+  <nav class="mobile-nav">
     <ul>
       <li class="header-link">
-        <a href="index.html" class="active-page" aria-current="page">
+        <a href="index.html">
           Home
         </a>
       </li>
@@ -69,26 +69,35 @@
         </a>
       </li>
       <li class="header-link highlighted-link">
-        <a href="contact.html">
+        <a href="contact.html" class="active-page" aria-current="page">
           Contact us
         </a>
       </li>
     </ul>
-  </div>
+  </nav>
   <main>
     <div class="title-plus-container">
       <h2>
-        Contact <span class="logo-f">F</span><span class="logo-lit">Lit</span>
+        Contact <span class="logo-f">F</span><span class="logo-lit">Lit</span><span class="logo-ie">.ie</span>
       </h2>
       <p>We are interested in your views!</p>
-      <p>What might be helpful to females in Ireland in navigating finances</p>
-      <p>'Decision points' where good information is needed?</p> 
-      <p>Obstacles encountered, what might be helpful?</p>
-
     </div>
-    <div class="form-container">
-      <form id="contact-form">
-        <div class="name-section form-section">
+    <div class="title-main-divide"></div>
+    <div class="form-plus-container">
+      <div class="question-container">
+        <div class="contact-question question-1">
+          <p>What might help women in Ireland when navigating finances?</p>
+        </div>
+        <div class="contact-question question-2">
+          <p>What are the 'Decision points' where good information is needed?</p>
+        </div>
+        <div class="contact-question question-3">
+          <p>What obstacles might women encounter?</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <form id="contact-form">
+  
           <div class="input-and-label">
             <label for="user_name">Name:</label>
             <input
@@ -97,48 +106,7 @@
               name="user_name"
               required>
           </div>
-   <!-- DMcC 16/05/24 Remove category fields for now, to align with EmailJS form fields -->
-   <!--         <p>Check the category that best applies to you:</p>
-            <div class="radio-category">
-              <input type="radio" name="repondant-category" id="provider" value="provider" required />
-              <label for="provider">Involved in <strong>providing</strong> financial literacy</label>
-            </div>
-            <div class="radio-category">
-              <input type="radio" name="repondant-category" id="user" value="user" required />
-              <label for="user">Looking to <strong>gain</strong> financial literacy</label>
-            </div>
-            <div class="radio-category">
-              <input type="radio" name="repondant-category" id="other" value="other" required />
-              <label for="other">Other</label>
-            </div>
-          </div> -->
-            
-        </div>
-
-        <div class="ideas-section form-section">
-          <div class="input-and-label">
-<!--            <label for="problems">What financial challenges do Irish women currently face?</label>
-            <textarea
-              id="problems"
-              cols="38"
-              rows="5"
-              placeholder="Type to fill ...."
-              name="problems"
-            ></textarea> -->
-          </div>
-          <div class="input-and-label">
-            <label for="inquiry_summary">What would like to see FLIT provide?</label>
-            <textarea
-              id="inquiry_summary"
-              cols="38"
-              rows="5"
-              placeholder="Type to fill ...."
-              name="inquiry_summary"
-            ></textarea>
-          </div>
-        </div>
-
-        <div class="email-section form-section">
+  
           <div class="input-and-label">
             <label for="user_email">Email:</label>
             <input
@@ -147,90 +115,48 @@
               name="user_email"
               required>
           </div>
-          <!-- DMcC 16/05/24 commenting out below for now as not yet aligned with EmailJS fields-->
-          <!-- 
-            <div class="input-and-label">
-            <label for="contact-consent">Happy for us to contact you directly?</label>
-            <input
-              type="checkbox"
-              id="contact-consent"
-              name="contact-consent"
-            >
+     
+          <div class="textarea-and-label">
+            <label for="inquiry_summary">What would you like to see FLIT provide?</label>
+            <textarea
+              id="inquiry_summary"
+              placeholder="Type to fill ...."
+              name="inquiry_summary"
+              required
+            ></textarea>
           </div>
-          <div class="input-and-label">
-            <label for="mail-list-consent">Would like to recieve updates about FLIT?</label>
-            <input
-              type="checkbox"
-              id="mail-list-consent"
-              name="mail-list-consent"
-            >
+  
+          <div class="submit-and-response">
+            <div class="response-container">
+              <p id="submission-response"></p>
+            </div>
+            <input type="submit" value="Submit" class="submit-button" id="contact-submit-button">
           </div>
-        -->
-        </div>
-
-        <div class="submit-section form-section">
-          <div class="response-container">
-            <p id="submission-response"></p>
-          </div>
-          <input type="submit" value="Submit" class="submit-button" id="contact-submit-button">
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
+
 
   </main>
 
   <!-- Load the EmailJS SDK: -->
-    <script
-      type="text/javascript" 
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
- 
-    <!-- initialise the emailjs SDK -->
-    <script type="text/javascript">
-      (function() {
-        console.log("Initialising emailjs SDK")
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init({
-          //  publicKey: process.env.EMAILJS_PUBLIC_KEY,
-          publicKey: 'nJIzMgsyYaZu0gOHX',
-        });
-        console.log('publicKey initialised');
-      })();
-    </script>
-    <script type="text/javascript">
-      // CONTACT FORM - content below from emailjs:
-      window.onload = function() {
-        console.log("Window loaded - function running")
-        const btn = document.getElementById('contact-submit-button');
-        console.log(btn);
-        const response = document.getElementById('submission-response');
-        console.log(response);
-        document.getElementById('contact-form').addEventListener(
-          'submit', 
-          function(event) {
-            console.log("Submit function triggered")
-            event.preventDefault();
-            if (btn.value === 'Submit'){
-              response.innerHTML = 'Submitting form ...';
-              //emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
-              emailjs.sendForm('service_l3pogah', 'template_sz9ug5t', this)
-              .then(() => {
-                response.innerHTML = 'Thank you for sharing your thoughts with us, you should receive an acknowledgement email in the next few minutes...';
-                btn.value = 'Clear form';
-              }, (err) => {
-                response.innerHTML = 'An error has occurred, please try submitting the form again.'
-                console.log(JSON.stringify(err));
-              });
-            } else if (btn.value === 'Clear form'){
-              console.log("Clear form called");
-              document.getElementById('contact-form').reset();
-              btn.value = 'Submit';
-              response.innerHTML = '';
-            }
-          }
-        );
-      }
-    </script>
+  <script
+    type="text/javascript" 
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
+  <!-- initialise the emailjs SDK -->
+  <script type="text/javascript">
+    (function() {
+      // console.log("Initialising emailjs SDK")
+      // https://dashboard.emailjs.com/admin/account
+      emailjs.init({
+        //  publicKey: process.env.EMAILJS_PUBLIC_KEY,
+        publicKey: 'nJIzMgsyYaZu0gOHX',
+      });
+      // console.log('publicKey initialised');
+    })();
+  </script>
 
   <!-- Link to the JavaScript file -->
   <script src="assets/js/script.js"></script>
