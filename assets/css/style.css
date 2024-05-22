@@ -612,6 +612,7 @@ header {
   margin-bottom: 2rem;
   margin-top: 1.5rem;
   padding: 1rem;
+  max-width: 35rem;
 }
 
 .input-and-label {
@@ -676,15 +677,6 @@ textarea {
   font-size: 0.9rem;
 }
 
-.contact-question {
-  display: none;
-  background-color: var(--pastel-green-2);
-  padding: 0.8rem;
-  border-radius: 30px;
-  width: 12rem;
-  text-align: center;
-}
-
 @media screen and (min-width:576px) {
   .response-container {
     font-size: 1rem;
@@ -700,32 +692,5 @@ textarea {
   .response-container {
     font-size: 1rem;
     min-height: 4rem;
-  }
-}
-
-@media screen and (min-width:768px){
-  .form-plus-container {
-    width: 95vw;
-    max-width: 50rem;
-    display: flex;
-    justify-content: space-between;
-  }
-  .form-container {
-    width: 70%;
-    max-width: 35rem;
-  }
-  .question-container {
-    margin-right: 4rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  .contact-question {
-    display: block;
-  }
-  .response-container {
-    font-size: 1.2rem;
-    min-height: 6rem;
   }
 }
