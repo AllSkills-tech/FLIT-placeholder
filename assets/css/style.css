@@ -521,6 +521,16 @@ header {
   border-radius: var(--container-radius);
 }
 
+/* DMcC 24/05/24 add post-link to get URLs to standout */
+.post-link {
+  /* margin-bottom: 1rem; */
+  color: var(--text-green);
+  /* padding: 0.5rem; */
+  border-radius: var(--container-radius);
+}
+
+
+
 .blog-link:hover {
   cursor: pointer;
   background-color: var(--grey-background);
