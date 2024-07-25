@@ -395,7 +395,7 @@ header {
 
 @media screen and (min-width:576px) {  
   .about-title-plus {
-    margin: 2rem;
+    margin: 1rem;
   }  
   .about-info {
     display: block;
@@ -490,26 +490,35 @@ header {
   color: var(--text-green);
 }
 
-.blog-table{
+.blog-table, .sdg-table{
   font-family: var(--main-font);
   font-size: 0.9rem;
   border-collapse: collapse;
   width: 100%;
 }
 
-.blog-table td,th
+.blog-table td,th, .sdg-table td,th
   {
     border: 1px solid #ddd;
     padding: 8px;
   }
   
-  .blog-table th
+  .blog-table th, .sdg-table th
   {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
+  }
+
+  
+  .blog-table th
+  {
     background-color: #04AA6D;
     color: white;
+  }
+
+  .sdg-table th{
+    background-color: --pastel-green-3;
   }
 
 @media screen and (min-width:576px) {
