@@ -117,6 +117,10 @@ header {
   box-shadow: var(--shadow-bottom);
 }
 
+.logo-image {
+  max-height: 50px;
+  max-width: 50px;
+}
 .logo {
   line-height: 3rem;
   padding: 0.5rem 1rem;
