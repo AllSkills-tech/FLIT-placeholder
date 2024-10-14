@@ -471,6 +471,34 @@ header {
   margin-bottom: 1rem;
 }
 
+/* DMcC 14/10/24 add styling for CTA-button on index page */
+.cta-button {
+  display: flex;
+  justify-content: center;
+}
+
+/* DMcC 14/10/24 add in blogs-link as CTA styling */
+.blogs-link {
+  padding: 0.5rem;
+  font-weight: var(--medium-font-weight);
+  font-size: 1rem;
+  border: none;
+  background-color: var(--text-green);
+  color: var(--inverse-text);
+  border-radius: var(--container-radius);
+}
+
+.blogs-link > a {
+  color: inherit;
+}
+
+.blogs-link:hover {
+  cursor: pointer;
+  background-color: var(--inverse-text);
+  color: var(--text-green);
+}
+
+
 .blog-open {
   padding: 0.5rem;
   position: absolute;
@@ -520,6 +548,32 @@ header {
     background-color: #04AA6D;
     color: white;
   }
+
+  .blogs-link {
+    padding: 0.5rem;
+    position: absolute;
+    font-weight: var(--heavy-font-weight);
+    font-size: 1rem;
+    border: none;
+    background-color: var(--text-green);
+    color: var(--inverse-text);
+    border-radius: var(--container-radius);
+  }
+  
+  .blogs-link > a {
+    color: inherit;
+  }
+  
+  .blogs-link:hover {
+    cursor: pointer;
+    background-color: var(--inverse-text);
+    color: var(--text-green);
+  }
+  
+  
+
+
+
 
   .sdg-table th{
     background-color: --pastel-green-3;
